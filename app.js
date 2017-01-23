@@ -13,9 +13,8 @@ const rl = readline.createInterface({
 });
 
 rl.input.on('keypress', (str,key)=>{
-    // utils.clearScreen(rl);
-    rl.clearLine(null,0);
-    console.log('\x1B[?25h','Good bye ...');
+    readline.clearLine(process.stdout,0);
+    console.log('Good bye ...','\x1B[?25h');
     process.exit(0);
 });
 
@@ -57,11 +56,11 @@ if(hosts.length){
             if(e){
                 readline.cursorTo(process.stdout,0,i+2);
                 readline.clearLine(process.stdout,0);
-                return console.log(host + ' ====> ',BgRed,host + ' Error check this host',Reset);
+                return console.log(BgRed,host + ' ====> ',Reset,host + ' Error check this host');
             }
             readline.cursorTo(process.stdout,0,i+2);
             readline.clearLine(process.stdout,0);
-            return console.log(host + ' ====> ',BgGreen,time,Reset,'\r');
+            return console.log(BgGreen,host + ' ====> ',Reset,time);
         })
     }, this);
 }
