@@ -1,5 +1,7 @@
-const exec = require('child_process').exec;
-const readline = require('readline');
+#! /usr/bin/env node
+
+var exec = require('child_process').exec;
+var readline = require('readline');
 var hosts = [];
 var stop = false;
 var BgRed = "\x1b[41m";
@@ -56,11 +58,11 @@ if(hosts.length){
             if(e){
                 readline.cursorTo(process.stdout,0,i+2);
                 readline.clearLine(process.stdout,0);
-                return console.log(BgRed,host + ' ====> ',Reset,host + ' Error check this host');
+                return console.log(BgRed,host + ' ====> Fail',Reset,host + ' Error check this host');
             }
             readline.cursorTo(process.stdout,0,i+2);
             readline.clearLine(process.stdout,0);
-            return console.log(BgGreen,host + ' ====> ',Reset,time);
+            return console.log(BgGreen,host + ' ====> Alive',Reset,time);
         })
     }, this);
 }

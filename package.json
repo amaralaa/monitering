@@ -1,5 +1,5 @@
 {
-  "name": "ip-monitor",
+  "name": "ip-monitor-cli",
   "version": "1.0.0",
   "description": "ip devices moniter",
   "main": "app.js",
@@ -16,5 +16,8 @@
     "url": "https://github.com/xnet87/monitering/issues"
   },
   "homepage": "https://github.com/xnet87/monitering#readme",
-  "dependencies": {}
+  "dependencies": {},
+    "bin": {
+    "ip-monitor-cli": "app.js"
+  }
 }
