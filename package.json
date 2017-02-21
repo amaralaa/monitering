@@ -1,5 +1,5 @@
 {
-  "name": "monitering",
+  "name": "ip-monitor",
   "version": "1.0.0",
   "description": "ip devices moniter",
   "main": "app.js",
